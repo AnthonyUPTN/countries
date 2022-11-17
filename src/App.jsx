@@ -1,8 +1,10 @@
 import { ThemeProvider } from "styled-components";
-import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 import Header from "components/Header";
+import Main from "components/Main";
+
+import MyRoutes from "routes/MyRoutes";
 
 import { lightTheme, darkTheme } from "themes";
 
@@ -16,12 +18,14 @@ function App() {
   };
 
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
-      <div>
+    <>
+      <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
         <Header toggleTheme={toggleTheme} />
-        <h1>hello</h1>
-      </div>
-    </ThemeProvider>
+        <Main>
+          <MyRoutes />
+        </Main>
+      </ThemeProvider>
+    </>
   );
 }
 

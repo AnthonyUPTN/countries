@@ -26,15 +26,8 @@ const Title = styled(Link).attrs({
   font-weight: var(--fw-bold);
 `;
 
-// const ModeSwitcher = styled.div`
-//   color: var(--colors-text);
-//   font-size: var(--fs-sm);
-//   cursor: pointer;
-//   // font-weight: var(--fw-bold);
-//   text-transform: capitalize;
-// `;
 const ThemeSwitcher = styled.div`
-  color: ${(props) => props.theme.color};
+  //   color: ${(props) => props.theme.color};
   font-size: var(--fs-sm);
   cursor: pointer;
   text-transform: capitalize;
