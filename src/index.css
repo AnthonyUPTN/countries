@@ -18,4 +18,6 @@ body {
   --fw-light: 300;
   --fw-normal: 600;
   --fw-bold: 800;
+
+  --colors-text-light: hsl(0, 0%, 100%);
 }

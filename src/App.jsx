@@ -1,10 +1,27 @@
-import { lightTheme, darkTheme } from "components/themes";
+import { ThemeProvider } from "styled-components";
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
+
+import Header from "components/Header";
+
+import { lightTheme, darkTheme } from "themes";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+
+  const isDarkTheme = theme === "dark";
+
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? "light" : "dark");
+  };
+
   return (
-    <div>
-      <h1>hello</h1>
-    </div>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <div>
+        <Header toggleTheme={toggleTheme} />
+        <h1>hello</h1>
+      </div>
+    </ThemeProvider>
   );
 }
 
